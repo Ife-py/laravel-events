@@ -24,7 +24,7 @@
 
     @yield('content')
 
-    {{-- <footer class="bg-dark text-white text-center my-3 py-3">
+    {{-- <footer class="py-3 my-3 text-center text-white bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">

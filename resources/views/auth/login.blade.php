@@ -1,9 +1,9 @@
-@extends('Layout.layout')
+@extends('Layout.auth')
 
 @section('content')
 <div class="container vh-100 d-flex justify-content-center align-items-center">
-    <div class="card p-4 shadow" style="width: 100%; max-width: 400px;">
-        <h2 class="text-center mb-4">Login</h2>
+    <div class="p-4 shadow card" style="width: 100%; max-width: 400px;">
+        <h2 class="mb-4 text-center">Login</h2>
         <form action="" method="POST">
             @csrf
             <div class="mb-3">

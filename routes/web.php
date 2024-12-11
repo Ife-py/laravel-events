@@ -10,7 +10,7 @@ Route::get('/', function () {
 });
 
 
-Route::controller( EventsManagerController::class)->group(function(){
+Route::controller( EventsManagerController::class)->prefix('events')->group(function(){
     Route::get('/','index')->name('index');
     Route::get('/create','create')->name('create');
     Route::post('/','store')->name('store');
@@ -18,12 +18,12 @@ Route::controller( EventsManagerController::class)->group(function(){
 });
 
 
-Route::controller(LoginController::class)->prefix('login')->group(function(){
+Route::controller(LoginController::class)->group(function(){
     Route::get('/','login')->name('login');
     // Route::put('/','store')->name('store');
 });
 
 Route::controller(RegisterController::class)->prefix('register')->group(function(){
-    Route::get('/','register')->name('register');
+    Route::get('/register','register')->name('register');
     Route::post('/','store')->name('store');
 });

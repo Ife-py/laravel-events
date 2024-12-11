@@ -1,4 +1,4 @@
-@extends('Layout.layout')
+@extends('Layout.auth')
 
 @section('content')
 <div class="container vh-100 d-flex justify-content-center align-items-center">
