@@ -9,6 +9,7 @@ class Event extends Model
     protected $fillable = [
         "name",
         "type",
-        "date",
+        "user_id",
+        "time",
     ];
 }

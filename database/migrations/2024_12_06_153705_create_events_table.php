@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->comment('The author of each event');
             $table->string('name');
-            $table->string('eventName');
             $table->string('type');
             $table->string('time');
             $table->timestamps();

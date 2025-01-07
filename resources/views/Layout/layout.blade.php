@@ -17,7 +17,7 @@
                 <a class="nav-link" data-bs-toggle="tab" href="{{ route('create') }}" aria-selected="false" tabindex="-1" role="tab">Create</a>
             </li>
             <li class="nav-item" role="presentation">
-                <a class="nav-link" data-bs-toggle="tab" href="#" aria-selected="false" tabindex="-1" role="tab">Contact-us</a>
+                <a class="btn btn-danger" data-bs-toggle="tab" href="{{ route('logout') }}" aria-selected="false" role="tab">Logout</a>
             </li>
         </ul>
     </nav>

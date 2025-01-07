@@ -10,19 +10,24 @@
                         <h5>Events form</h5>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('store') }}" method="POST">
+                        @if (session('success'))
+                            <p class="alert alert-success">{{ Session('success')}}</p>
+                        @endif
+                        <form action="{{ route('event.store') }}" method="POST">
                             @csrf
                             <div class="my-4 form-element">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" name="name" placeholder="Name" required>
-                            </div>
-                            <div class="my-4 form-element">
-                                <label for="event" class="form-label">Event</label>
-                                <input type="text" class="form-control" name="event-name" placeholder="Event Name" required>
+                                <input type="text" class="form-control" name="name" placeholder="Enter your name:" required>
+                                @error('name')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="my-4 form-element">
                                 <label for="date" class="form-label" >Select a date</label>
-                                <input type="date" class="form-control" id="date" name="date" required>
+                                <input type="date" class="form-control" id="date" name="time1" required>
+                                @error('time1')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                             <label for="category" class="form-label">Select a Category</label>
                             <select class="form-select" id="category" name="type" required>
